@@ -537,12 +537,12 @@ class InputGesture(braille.BrailleDisplayGesture, brailleInput.BrailleInputGestu
 
 		if driver._baud != 1 and keys[0] == ord(b'L'):
 			assert isinstance(keys, bytes)
-			if (keys[3] - 48) >> 3:
-				scancode = keys[5] - 48 << 4 | keys[6] - 48
-				press = not keys[4] & 1
-				ext = bool(keys[4] & 2)
-				keyboardHandler.injectRawKeyboardInput(press,scancode,ext)
-				return
+#			if (keys[3] - 48) >> 3:
+#				scancode = keys[5] - 48 << 4 | keys[6] - 48
+#				press = not keys[4] & 1
+#				ext = bool(keys[4] & 2)
+#				keyboardHandler.injectRawKeyboardInput(press,scancode,ext)
+#				return
 			#get dots
 			z = ord(b'0')
 			b = keys[4] - z
